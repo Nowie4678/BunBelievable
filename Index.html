@@ -1,0 +1,305 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BunBelievable</title>
+
+    <meta name="description" content="Order sizzling hot, delicious gourmet burgers from BunBelievable! Fresh buns, juicy patties and fast deliveries. Satisfy your cravings today!">
+    <meta name="theme-color" content="#18151e">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="BunBelievable | Burgers so good, you will think it is BunBelievable">
+    <meta property="og:description" content="Order sizzling hot gourmet burgers, fries and shakes. Fast delivery and WhatsApp ordering.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=60&w=1280&auto=format&fit=crop">
+
+    <!-- Speed: connect early to the image host, preload the hero photo, load the script without blocking -->
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+    <link rel="dns-prefetch" href="https://unsplash.com">
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=60&w=1280&auto=format&fit=crop" fetchpriority="high">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="site-header" id="siteHeader">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">BUN<span>BELIEVABLE</span></a>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="#" class="active">Home</a>
+                <a href="#locations">Locations</a>
+                <a href="#menu">Menu</a>
+                <a href="#events">Events</a>
+                <a href="#about">About</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#testimonials">Reviews</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="cart-toggle" id="cartToggle" aria-label="Open cart">
+                    🛒 <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <a href="#menu" class="btn btn-primary">Order Now</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>BunBelievable</h1>
+            <h2>Burgers so good, you will think it is BunBelievable</h2>
+            <p>
+                Big flavours. Juicy patties. Fresh buns.
+                Zero boring bites.<br>One bite and you will understand.
+            </p>
+
+            <div class="open-status" id="openStatus" aria-live="polite"></div>
+            <div class="hero-promo" id="heroPromo" style="display:none"></div>
+            <div class="hero-buttons">
+                <a href="#locations" class="btn btn-primary">Find My Local</a>
+                <a href="#menu" class="btn btn-outline">View Menu</a>
+            </div>
+        </div>
+        <div class="scroll-cue">↓ Scroll</div>
+    </section>
+
+    <!-- LOCATIONS -->
+    <section class="locations" id="locations">
+        <div class="container">
+            <h2>Our Locations</h2>
+            <p class="section-sub">6 locations and counting</p>
+
+            <div class="location-grid">
+                <a href="#" class="location-card">Downtown</a>
+                <a href="#" class="location-card">Riverside</a>
+                <a href="#" class="location-card">Westlands</a>
+                <a href="#" class="location-card">Karen</a>
+                <a href="#" class="location-card">Thika Road</a>
+                <a href="#" class="location-card">Kilimani</a>
+            </div>
+
+            <a href="#" class="link-arrow">Delivery Locations →</a>
+        </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <p class="section-sub">Burgers, fries, shakes and more! Pick your poison</p>
+
+            <div class="menu-filters" id="menuFilters" role="group" aria-label="Filter the menu">
+                <button type="button" class="filter-btn active" data-cat="all" aria-pressed="true">All</button>
+                <button type="button" class="filter-btn" data-cat="burgers" aria-pressed="false">Burgers</button>
+                <button type="button" class="filter-btn" data-cat="sides" aria-pressed="false">Sides</button>
+                <button type="button" class="filter-btn" data-cat="shakes" aria-pressed="false">Shakes</button>
+            </div>
+
+            <div class="menu-grid" id="menuGrid">
+                <!-- Cards injected by JS -->
+            </div>
+
+            <p class="allergy-note">Have a food allergy? Please tell us when you order so we can advise you.</p>
+
+            <a href="#" class="btn btn-primary">View Full Menu</a>
+        </div>
+    </section>
+
+    <!-- EVENTS & OFFERS -->
+    <section class="events" id="events">
+        <div class="container">
+            <h2>Events &amp; Offers</h2>
+            <p class="section-sub">Holiday specials and what is happening at BunBelievable</p>
+            <div class="events-grid" id="eventsGrid"></div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <div class="container about-inner">
+            <div class="about-text">
+                <h2>Nice buns, <span>Great Meat!</span></h2>
+                <p class="about-lead">Welcome to <strong>BunBelievable</strong> - where we take our food seriously, but never ourselves.</p>
+                <p>Founded in 2026, BunBelievable started with a simple, juicy mission: to eliminate dry, boring burgers and replace them with flame-grilled, double-stacked masterpieces.</p>
+                <p>Whether you are grabbing a late-night bite or ordering lunch straight to your desk via WhatsApp, we deliver hot, fresh and unbelievably tasty burgers every single time.</p>
+
+                <a href="#contact" class="btn btn-outline">Our Story</a>
+            </div>
+            <div class="about-stat-grid">
+                <div class="stat"><span>6</span><p>Locations</p></div>
+                <div class="stat"><span>100%</span><p>Fresh Beef</p></div>
+                <div class="stat"><span>4.8★</span><p>Avg Rating</p></div>
+                <div class="stat"><span>2026</span><p>Founded</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2>Follow Us @BunBelievable</h2>
+            <div class="gallery-grid" id="galleryGrid"></div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <p class="section-sub">Real reviews from real burger lovers</p>
+
+            <div class="testimonial-viewport">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <!-- Cards injected by JS -->
+                </div>
+            </div>
+
+            <div class="testimonial-controls">
+                <button class="t-arrow" id="tPrev" aria-label="Previous review">←</button>
+                <div class="t-dots" id="tDots"></div>
+                <button class="t-arrow" id="tNext" aria-label="Next review">→</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2>Questions? Answered.</h2>
+            <p class="section-sub">Quick answers about ordering, delivery and more</p>
+            <div class="faq-list" id="faqList"></div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+        <div class="container newsletter-inner">
+            <div>
+                <h2>Join Our Mailing List</h2>
+                <p>Get the latest drops, deals and openings straight to your inbox.</p>
+            </div>
+            <form id="newsletterForm" class="newsletter-form">
+                <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+            <p class="form-message" id="formMessage"></p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" id="contact">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">BUN<span>BELIEVABLE</span></a>
+                <p>To have an equal world, where BunBelievable is the best burger.</p>
+                <div class="socials">
+                    <a href="#" aria-label="Instagram">IG</a>
+                    <a href="#" aria-label="Facebook">FB</a>
+                    <a href="#" aria-label="TikTok">TT</a>
+                    <a href="#" aria-label="YouTube">YT</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <a href="#locations">Locations</a>
+                <a href="#menu">Menu</a>
+                <a href="#about">About Us</a>
+                <a href="#gallery">Gallery</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="#">Careers</a>
+                <a href="#">Charity</a>
+                <a href="#faq">FAQs</a>
+                <a href="#">Legals</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Get In Touch</h4>
+                <a href="mailto:hello@bunbelievable.com">hello@bunbelievable.com</a>
+                <a href="tel:+254717218062">Call +254 717 218 062</a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>© 2026 BunBelievable. All rights reserved.</p>
+            <button type="button" class="link-btn" id="cookieSettings">Cookie settings</button>
+        </div>
+    </footer>
+
+    <!-- CART DRAWER -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3>Your Order</h3>
+            <button class="cart-close" id="cartClose" aria-label="Close cart">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="cart-empty">Your order is empty. Add something tasty!</p>
+        </div>
+        <div class="cart-footer">
+            <div class="order-form">
+                <div class="order-type">
+                    <label><input type="radio" name="orderType" value="delivery" checked> Delivery</label>
+                    <label><input type="radio" name="orderType" value="pickup"> Pickup</label>
+                </div>
+                <input type="text" id="custName" placeholder="Your name" autocomplete="name">
+                <input type="tel" id="custPhone" placeholder="Phone number" autocomplete="tel">
+                <div id="deliveryFields">
+                    <select id="deliveryZone" aria-label="Delivery area"></select>
+                    <input type="text" id="custAddress" placeholder="Street, building or landmark" autocomplete="street-address">
+                </div>
+                <textarea id="custNotes" rows="2" placeholder="Notes (allergies, extra sauce...)"></textarea>
+                <p class="delivery-hint" id="deliveryHint"></p>
+            </div>
+            <div class="promo-row">
+                <input type="text" id="promoInput" placeholder="Promo code" autocomplete="off">
+                <button type="button" class="promo-btn" id="promoBtn">Apply</button>
+            </div>
+            <p class="promo-message" id="promoMessage"></p>
+            <div class="cart-line">
+                <span>Subtotal</span>
+                <span id="cartSubtotal">KSh 0</span>
+            </div>
+            <div class="cart-line cart-line-discount" id="cartDiscountRow" style="display:none">
+                <span>Discount</span>
+                <span id="cartDiscount">- KSh 0</span>
+            </div>
+            <div class="cart-line" id="cartDeliveryRow" style="display:none">
+                <span>Delivery</span>
+                <span id="cartDelivery">Free</span>
+            </div>
+            <div class="cart-total-row">
+                <span>Total</span>
+                <span id="cartTotal">KSh 0</span>
+            </div>
+            <button class="btn btn-primary cart-checkout" id="checkoutBtn">Send Order on WhatsApp</button>
+        </div>
+    </aside>
+
+    <!-- BACK TO TOP -->
+    <button type="button" class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+    <!-- COOKIE CONSENT -->
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie preferences" hidden>
+        <p>
+            <strong>🍪 Cookies &amp; storage</strong><br>
+            Essential storage keeps the site working. If you accept all, we also remember your order basket,
+            your name and phone for faster checkout, and your reviews on this device.
+            You can change this any time from the footer.
+        </p>
+        <div class="cookie-actions">
+            <button type="button" class="btn btn-primary" id="cookieAccept">Accept all</button>
+            <button type="button" class="btn btn-outline" id="cookieEssential">Essential only</button>
+        </div>
+    </div>
+
+    <!-- The chatbot (Bunny) is built into script.js and style.css, nothing else to add here -->
+</body>
+</html>
